@@ -4,11 +4,19 @@ import { StyleSheet, Text, View , TextInput, TouchableOpacity } from 'react-nati
 export default function App() {
   return (
     <View style={styles.container}>
-       <Text style={styles.title}>Iniciar Sesión</Text>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Login App (Apellido, Apellido)</Text>
+      </View>
 
-       <TextInput
-         style={styles.input}
-         placeholder="Usuario"
+      <Image
+        source={{ uri: 'https://seeklogo.com/images/C/club-atletico-velez-sarsfield-logo-8C71C89DC7-seeklogo.com.png' }}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Correo electrónico"
         placeholderTextColor="#aaa"
       />
 
@@ -19,11 +27,19 @@ export default function App() {
         secureTextEntry
       />
 
-     <TouchableOpacity style={styles.button}>
-     <Text style={styles.buttonText}>Ingresar</Text>
-     </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>INGRESAR</Text>
+      </TouchableOpacity>
 
-     <StatusBar style="auto" />
+      <TouchableOpacity>
+        <Text style={styles.link}>¿Olvidaste la clave?</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+        <Text style={styles.link}>Crear Cuenta</Text>
+      </TouchableOpacity>
+
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -31,37 +47,55 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#eee',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
-  title: {
-    fontSize: 28,
+  header: {
+    backgroundColor: '#8a2be2',
+    width: '100%',
+    paddingVertical: 15,
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#fff',
+    fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 40,
+  },
+  logo: {
+    width: '80%',
+    height: 120,
+    marginVertical: 30,
+    backgroundColor: '#fff',
   },
   input: {
     width: '100%',
     height: 50,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 10,
+    borderColor: '#8a2be2',
+    borderWidth: 1.5,
+    borderRadius: 8,
     paddingHorizontal: 15,
-    marginBottom: 20,
+    marginBottom: 15,
+    backgroundColor: '#fff',
     fontSize: 16,
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#8a2be2',
     paddingVertical: 15,
-    paddingHorizontal: 40,
-    borderRadius: 10,
-    marginTop: 10,
+    borderRadius: 8,
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 10,
   },
   buttonText: {
     color: '#fff',
-    fontSize: 18,
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  link: {
+    color: '#333',
+    fontSize: 14,
+    marginTop: 10,
+    textDecorationLine: 'underline',
   },
 });
