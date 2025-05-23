@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   return (
@@ -50,12 +50,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
     alignItems: 'center',
     paddingHorizontal: 20,
+    justifyContent: 'center',
   },
   header: {
     backgroundColor: '#8a2be2',
     width: '100%',
     paddingVertical: 15,
     alignItems: 'center',
+    marginBottom: 20,
   },
   headerText: {
     color: '#fff',
@@ -66,7 +68,6 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 120,
     marginVertical: 30,
-    backgroundColor: '#fff',
   },
   input: {
     width: '100%',
